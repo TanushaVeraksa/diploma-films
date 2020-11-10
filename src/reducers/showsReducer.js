@@ -3,7 +3,6 @@ import { SET_SHOW } from "../constants/shows";
 const initialState = {
   currentShow: null,
   shows: null,
-  searchedShows: null
 };
 
 export default (state = initialState, { type, payload }) => {
