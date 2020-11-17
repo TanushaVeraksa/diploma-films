@@ -1,7 +1,20 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { connect } from "react-redux";
+import { getShows } from "../../actions/shows";
+import ShowsGallery from "./components/ShowsGallery";
 
-function Home() {
-    return <div>Home</div>;
+function Home(props) {
+    useEffect (()=> {
+      props.getShows(1);
+    }, [props]);
+
+    return <div>Home <ShowsGallery/></div>;
 }
 
-export default Home;
+const mapStateToProps = (state) => ({});
+
+const mapDispatchToProps = (dispatch) => ({
+    getShows: (page) => dispatch(getShows(page)), 
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

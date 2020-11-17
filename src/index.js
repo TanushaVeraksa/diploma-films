@@ -5,7 +5,7 @@ import Router from "./routes";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import store from "./store";
-
+import "./styless.css";
 
 ReactDOM.render(
   <React.StrictMode>
